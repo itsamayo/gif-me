@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Gif Me</title>
+<link id="main-css" rel="stylesheet" href="./assets/css/style.css" />
+<link rel="stylesheet" href="./assets/css/bootstrap.css">
+</head>
+<body>
+  <section>
+      <div class="container">
+          <div id="main">
+            <p>
+                <strong>Gif Me</strong>
+                <br>Pretty straight forward 🤷
+                <br>
+                <div class="input-group">
+                  <input type="text" id="search" class="form-control" placeholder="What kinda gif do you want?" aria-label="Search for a gif" aria-describedby="search">                  
+                </div><br>
+                <img id="gif" style="border-radius: 10px;" src="https://media.giphy.com/media/26gJzGnX1uV0J4lfq/giphy.gif"/><br>
+                <img src="./assets/images/link.svg" width="20" alt="" id="copy-link" style="cursor: pointer;" />
+            </p>                
+          </div>
+          <div class="footer">
+              <p>Powered by <a>Giphy</a></p>
+            </div>
+        </div>
+  </section>
+<!-- Insert this line above script imports  -->
+<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+<!-- normal script imports etc  -->
+<script src="./assets/js/jquery.min.js" type="text/javascript"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="./assets/js//frontend.js" type="text/javascript"></script>
+
+<!-- Insert this line after script imports -->
+<script>if (window.module) module = window.module;</script>
+
+</body>
+</html>
