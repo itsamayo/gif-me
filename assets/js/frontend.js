@@ -1,6 +1,7 @@
 const electron = require('electron');
 const clipboard = electron.clipboard;
-const remote = require('electron').remote
+const remote = require('electron').remote;
+const shell = require('electron').shell;
 
 $(document).ready(function(){  
     $("#copy-link").css("visibility", "hidden");
@@ -26,7 +27,11 @@ $(document).ready(function(){
     $( "#copy-link" ).on( "click", function(element) {
         clipboard.writeText( $("#gif").attr("src"), 'selection');
 		
-		swal("Copied the gif's link to your clipboard 🥳");
+		swal("Copied the gif's link to your clipboard");
+    });
+
+    $( "#giphy" ).on( "click", function(element) {
+        shell.openExternal('https://giphy.com');
     });
 
     $( "#save-image" ).on( "click", function save2() {

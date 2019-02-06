@@ -27,6 +27,11 @@
 	font-family: 'Courier New', Courier, monospace
 }
 
+.tools-text{
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: 400;
+}
+
 body.win32,
 body.win32 #app-container{
 	background: #fcfcfc;
