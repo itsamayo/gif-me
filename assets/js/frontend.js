@@ -1,6 +1,5 @@
 const electron = require('electron');
 const clipboard = electron.clipboard;
-const shell = require('electron').shell;
 
 $(document).ready(function(){  
     $("#copy-link").css("visibility", "hidden");
@@ -37,7 +36,16 @@ $(document).ready(function(){
         a.click()
     });
 
-    $('#giphy').click(function() {
-        shell.openExternal("https://giphy.com");
+    $('#quit').click(function() {
+        swal({
+            title: "Are you sure?",
+            buttons: true,
+            dangerMode: true,
+          })
+          .then((quit) => {
+            if (quit) {
+                require('remote').app.quit()
+            } 
+          });
     });
 })   

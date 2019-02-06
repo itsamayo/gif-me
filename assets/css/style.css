@@ -46,12 +46,23 @@ img{
 	max-width: 400px;
 }
 
+#quit {
+	position: fixed;
+	right: 10;	
+	font-weight: 700;
+	font-size: 13px;
+	text-align: right;
+ }
+
 .footer {
 	position: fixed;
-	left: 0;
-	bottom: 0;
-	width: 100%;
+	left: 10;
+	right: 10;
+	bottom: 10;
+	width: 100%;	
+	font-weight: 700;
 	color: #A1C2E4;
+	font-family: 'Courier New', Courier, monospace;
 	font-size: 11px;
 	text-align: center;
  }
