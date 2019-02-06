@@ -24,5 +24,5 @@ mb.on('after-create-window', function createWindow(){
 
 contextMenu({
   showSaveImageAs: true,
-  showInspectElement: config.dev  
+  showInspectElement: false
 });
