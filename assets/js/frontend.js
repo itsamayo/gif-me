@@ -1,5 +1,6 @@
 const electron = require('electron');
 const clipboard = electron.clipboard;
+const remote = require('electron').remote
 
 $(document).ready(function(){  
     $("#copy-link").css("visibility", "hidden");
@@ -44,7 +45,7 @@ $(document).ready(function(){
           })
           .then((quit) => {
             if (quit) {
-                require('remote').app.quit()
+                remote.getCurrentWindow().close();
             } 
           });
     });
