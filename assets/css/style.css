@@ -21,6 +21,12 @@
 	height: 500px;
 }
 
+.tools{
+	color: #A1C2E4;
+	text-align: center;
+	font-family: 'Courier New', Courier, monospace
+}
+
 body.win32,
 body.win32 #app-container{
 	background: #fcfcfc;

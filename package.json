@@ -1,15 +1,50 @@
 {
   "name": "gof-me",
+  "productName": "Gif Me",
   "version": "1.0.0",
   "description": "Gif Me - Just sends you a gif appropriate to your search term",
-  "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
-  },
   "author": "Ashley Sanders",
   "license": "ISC",
   "dependencies": {
+    "electron-context-menu": "^0.11.0",
     "menubar": "^5.2.3"
+  },
+  "devDependencies": {
+    "electron-builder": "^20.38.5"
+  },
+  "build": {
+    "appId": "theappsid",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "NSIS",
+      "icon": "build/icon.ico",
+      "publisherName": "Ashley Sanders - Mayo"
+    }
+  },
+  "main": "main.js",
+  "scripts": {
+    "postinstall": "install-app-deps",
+    "start": "electron .",
+    "pack": "build --dir",
+    "dist": "build"
   }
 }
