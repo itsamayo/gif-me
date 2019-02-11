@@ -1,4 +1,4 @@
-# Gif Me Mac/Windows Menubar App
+# Gif Me OSX/Windows Menubar App
 
 The main files:
 
