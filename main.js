@@ -1,6 +1,6 @@
 var menubar = require('menubar');
 const config = require('./assets/js/config');
-const {app, BrowserWindow} = require('electron');
+const {app, BrowserWindow, Menu} = require('electron');
 const contextMenu = require('electron-context-menu');
 const path = require('path');
 
@@ -22,6 +22,25 @@ mb.on('after-create-window', function createWindow(){
     mb.window.openDevTools();	
   }  
 })
+
+var template = [{
+   label: "Application",
+   submenu: [       
+       { label: "Quit", accelerator: "Command+Q", click: function() { app.quit(); }}
+   ]}, {
+   label: "Edit",
+   submenu: [
+       { label: "Undo", accelerator: "CmdOrCtrl+Z", selector: "undo:" },
+       { label: "Redo", accelerator: "Shift+CmdOrCtrl+Z", selector: "redo:" },
+       { type: "separator" },
+       { label: "Cut", accelerator: "CmdOrCtrl+X", selector: "cut:" },
+       { label: "Copy", accelerator: "CmdOrCtrl+C", selector: "copy:" },
+       { label: "Paste", accelerator: "CmdOrCtrl+V", selector: "paste:" },
+       { label: "Select All", accelerator: "CmdOrCtrl+A", selector: "selectAll:" }
+   ]}
+];
+
+Menu.setApplicationMenu(Menu.buildFromTemplate(template));
 
 contextMenu({
   showSaveImageAs: true,
