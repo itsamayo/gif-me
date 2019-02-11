@@ -13,7 +13,7 @@
     "electron-builder": "^20.38.5"
   },
   "build": {
-    "appId": "theappsid",
+    "appId": "com.mayo.gifme",
     "dmg": {
       "contents": [
         {

@@ -17,6 +17,7 @@ mb.on('ready', function ready () {
 })
 
 mb.on('after-create-window', function createWindow(){
+  console.log(config.dev);
   if(config.dev == true){
     mb.window.openDevTools();	
   }  
