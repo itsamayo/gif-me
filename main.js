@@ -3,6 +3,7 @@ const config = require('./assets/js/config');
 const {app, BrowserWindow, Menu} = require('electron');
 const contextMenu = require('electron-context-menu');
 const path = require('path');
+const autoLaunch = require('auto-launch');
 
 var mb = menubar();
 mb.setOption( 'height', 600 );
@@ -46,3 +47,21 @@ contextMenu({
   showSaveImageAs: true,
   showInspectElement: false
 });
+
+var appAutoLauncher = new autoLaunch({
+	name: 'Thought Train',
+	path: '/Applications/Thought Train.app'
+});
+
+appAutoLauncher.enable();
+
+appAutoLauncher.isEnabled()
+.then(function(isEnabled){
+	if(isEnabled){
+		return;
+	}
+	appAutoLauncher.enable();
+})
+.catch(function(err){
+	console.log('An error with appAutoLauncher ' + err);
+})

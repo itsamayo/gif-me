@@ -16,10 +16,14 @@
               <div class="input-group">
                 <input type="text" id="search" class="form-control" placeholder="Type keywords, hit ENTER, yield GIF magic" aria-label="Search for a GIF" aria-describedby="search">                  
               </div><br>
-              <img style="max-width:300px; max-height:300px; border-radius: 5px;" id="gif" src="https://media.giphy.com/media/l0ExsgrTuACbtPaqQ/giphy.gif"/><br>
               <div class="tools">
-                  <i class="fas fa-link" id="copy-link" style="cursor: pointer; font-weight: 900;" data-toggle="tooltip" title="Copy link to clipboard"><span class="tools-text"> Copy Link  </span></i>
-                  <i class="far fa-save" id="save-image" style="cursor: pointer; font-weight: 900;" data-toggle="tooltip" title="Save to computer"><span class="tools-text"> Download</span></i>
+                  <i class="fas fa-arrow-alt-circle-left" id="prev-gif" style="cursor: pointer; font-weight: 900;" data-toggle="tooltip" title="Next GIF"><span class="tools-text" style="font-weight: 900;"> Prev | </span></i>                
+                  <span class="tools-text" id="next-gif" style="cursor: pointer; font-weight: 900;" data-toggle="tooltip" title="Next GIF"> Next <i class="fas fa-arrow-alt-circle-right"></i></span>                
+              </div><br>
+              <img style="max-width:300px; max-height:220px; border-radius: 5px;" id="gif" src="https://media.giphy.com/media/l0ExsgrTuACbtPaqQ/giphy.gif"/><br>
+              <div class="tools">
+                  <i class="fas fa-link" id="copy-link" style="cursor: pointer; font-weight: 900;" data-toggle="tooltip" title="Copy link to clipboard"><span class="tools-text" style="font-weight: 900;"> Copy-Link  </span></i>
+                  <i class="far fa-save" id="save-image" style="cursor: pointer; font-weight: 900;" data-toggle="tooltip" title="Save to computer"><span class="tools-text" style="font-weight: 900;"> Download</span></i>
               </div>                
           </p>                
         </div>
