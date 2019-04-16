@@ -47,6 +47,7 @@ Menu.setApplicationMenu(Menu.buildFromTemplate(template));
 
 contextMenu({
   showSaveImageAs: true,
+  showCopyImageAddress: true,
   showInspectElement: false
 });
 

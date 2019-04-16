@@ -91,20 +91,10 @@ $(document).ready(function(){
         var a  = document.createElement('a');
         a.href = $("#gif").attr("src");
         a.download = 'giphy.gif';
-
         a.click()
     });
 
     $('#quit').click(function() {
-        swal({
-            title: "Are you sure?",
-            buttons: true,
-            dangerMode: true,
-          })
-          .then((quit) => {
-            if (quit) {
-                remote.getCurrentWindow().close();
-            } 
-          });
+        remote.getCurrentWindow().close();
     });
 })   
