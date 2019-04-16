@@ -2,7 +2,6 @@ const electron = require('electron');
 const clipboard = electron.clipboard;
 const remote = require('electron').remote;
 const shell = require('electron').shell;
-const version = process.env.npm_package_version;
 
 $(document).ready(function(){ 
     var gifs = []; 
@@ -13,8 +12,8 @@ $(document).ready(function(){
     $("#prev-gif").css("visibility", "hidden");
     $("#next-gif").css("visibility", "hidden");
 
-    console.log(version);
-    $("#version").text("v"+version);
+    console.log(config.version);
+    $("#version").text("v"+config.version);
 
     $( "#search" ).on( "keydown", function(event) {
         if(event.which == 13) {
