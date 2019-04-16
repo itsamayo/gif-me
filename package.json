@@ -1,8 +1,8 @@
 {
   "name": "gif-me",
-  "productName": "Gif Me",
+  "productName": "GIFme",
   "version": "1.0.5",
-  "description": "Gif Me - Just sends you a gif appropriate to your search term",
+  "description": "The unrelenting power of GIFs at your finger tips",
   "author": "Ashley Sanders",
   "license": "ISC",
   "dependencies": {
