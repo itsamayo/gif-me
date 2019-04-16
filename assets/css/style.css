@@ -51,6 +51,14 @@ img{
 	max-width: 400px;
 }
 
+#version {
+	position: fixed;
+	left: 10;	
+	font-weight: 700;
+	font-size: 13px;
+	text-align: left;
+ }
+
 #quit {
 	position: fixed;
 	right: 10;	
