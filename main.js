@@ -14,6 +14,7 @@ var iconPath = path.join(__dirname, '/assets/images/menuicon.png');
 mb.setOption( 'icon', iconPath );
 
 mb.on('ready', function ready () {
+  autoUpdater.checkForUpdatesAndNotify();
   console.log('app is ready');
 })
 
