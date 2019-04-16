@@ -4,6 +4,7 @@ const {app, BrowserWindow, Menu} = require('electron');
 const contextMenu = require('electron-context-menu');
 const path = require('path');
 const autoLaunch = require('auto-launch');
+const {autoUpdater} = require("electron-updater");
 
 var mb = menubar();
 mb.setOption( 'height', 600 );
