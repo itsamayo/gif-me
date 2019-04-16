@@ -3,13 +3,13 @@
 }
 
 #main p{
-	color: #A1C2E4;
+	color: #7ba4ce;
 	padding: 40px 40px 0px 40px;
 	text-align: center;
 	font-family: 'Courier New', Courier, monospace
 }
 #main a{
-	color: #A1C2E4;
+	color: #7ba4ce;
 }
 
 #app-container{
@@ -22,7 +22,7 @@
 }
 
 .tools{
-	color: #A1C2E4;
+	color: #7ba4ce;
 	text-align: center;
 	font-family: 'Courier New', Courier, monospace
 }
@@ -40,7 +40,7 @@ body.win32 #app-container{
 .find-spots{
 	border: 1px;
 	border-radius: 50px;
-	border-color: #A1C2E4;
+	border-color: #7ba4ce;
 	padding: 5px;
 }
 
