@@ -2,8 +2,22 @@ const electron = require('electron');
 const clipboard = electron.clipboard;
 const remote = require('electron').remote;
 const shell = require('electron').shell;
+const request = require('request');
 
 $(document).ready(function(){ 
+    var userCount = 0;
+
+    require("machine-uuid")(function(uuid) {
+        var body = {
+          uuid: uuid
+        };
+        request.post({url:'https://waila.ml/api/gifme/updateUsers', formData: body}, function optionalCallback(err, httpResponse, body) {
+          if (err) {
+            return console.error('upload failed:', err);
+          }
+        });
+    })
+
     var gifs = []; 
     var currentGif = {};
     var currentGifIndex = 0;

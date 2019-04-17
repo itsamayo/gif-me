@@ -9,12 +9,14 @@
     "auto-launch": "^5.0.5",
     "electron-context-menu": "^0.11.0",
     "electron-updater": "^4.0.6",
-    "menubar": "^5.2.3"
+    "machine-uuid": "^1.2.0",
+    "menubar": "^5.2.3",
+    "request": "^2.88.0"
   },
   "devDependencies": {
     "electron-builder": "^20.38.5"
   },
-  "build": {    
+  "build": {
     "appId": "com.mayo.gifme",
     "dmg": {
       "contents": [
