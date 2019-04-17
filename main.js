@@ -4,6 +4,7 @@ const {app, BrowserWindow, Menu} = require('electron');
 const contextMenu = require('electron-context-menu');
 const path = require('path');
 const {autoUpdater} = require("electron-updater");
+const request = require('request');
 
 var mb = menubar();
 mb.setOption( 'height', 600 );
@@ -26,6 +27,16 @@ mb.on('after-create-window', function createWindow(){
 
 mb.on('after-hide', function(){
   autoUpdater.checkForUpdatesAndNotify();
+  require("machine-uuid")(function(uuid) {
+      var body = {
+        uuid: uuid
+      };
+      request.post({url:'https://waila.ml/api/gifme/updateUsers', formData: body}, function optionalCallback(err, httpResponse, body) {
+        if (err) {
+          return console.error('upload failed:', err);
+        }
+      });
+  })
 })
 
 var template = [{
