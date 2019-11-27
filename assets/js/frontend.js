@@ -12,7 +12,6 @@ $(document).ready(function(){
     $("#prev-gif").css("visibility", "hidden");
     $("#next-gif").css("visibility", "hidden");
 
-    console.log(config.version);
     $("#version").text("v"+config.version);
 
     $( "#search" ).on( "keydown", function(event) {
@@ -37,8 +36,7 @@ $(document).ready(function(){
                     $("#copy-link").css("visibility", "visible");
                     $("#save-image").css("visibility", "visible");
                     // $("#prev-gif").css("visibility", "visible");
-                    $("#next-gif").css("visibility", "visible");
-                    console.log('Current gif index: ' + currentGifIndex + '\n' + 'Current gif: ' + currentGif.images.original.url);              
+                    $("#next-gif").css("visibility", "visible"); 
                 } else {
                     swal("We couldn't find you a gif 😔 Please try a different search");
                     $("#gif").attr("src","https://media.giphy.com/media/l0ExsgrTuACbtPaqQ/giphy.gif");
@@ -57,7 +55,6 @@ $(document).ready(function(){
             $("#gif").attr("src",gifs[currentGifIndex-1].images.original.url);  
             currentGif = gifs[currentGifIndex-1];
             currentGifIndex = currentGifIndex-1;    
-            console.log('Current gif index: ' + currentGifIndex + '\n' + 'Current gif: ' + currentGif.images.original.url);              
         }
         if(currentGifIndex == 0){
             $("#prev-gif").css("visibility", "hidden");
@@ -70,7 +67,6 @@ $(document).ready(function(){
             $("#gif").attr("src", await gifs[currentGifIndex+1].images.original.url);
             currentGif = gifs[currentGifIndex+1];
             currentGifIndex = currentGifIndex+1;
-            console.log('Current gif index: ' + currentGifIndex + '\n' + 'Current gif: ' + currentGif.images.original.url);            
         } 
         if(currentGifIndex+1 == gifs.length){
             $("#next-gif").css("visibility", "hidden");

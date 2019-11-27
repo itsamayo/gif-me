@@ -19,7 +19,6 @@ mb.on('ready', function ready () {
 })
 
 mb.on('after-create-window', function createWindow(){
-  console.log(config.dev);
   if(config.dev == true){
     mb.window.openDevTools();	
   }  
@@ -27,13 +26,6 @@ mb.on('after-create-window', function createWindow(){
 
 mb.on('after-hide', function(){
   autoUpdater.checkForUpdatesAndNotify();
-  // require("machine-uuid")(function() {      
-  //     request.get({url:'http://localhost:8080/api/gifme/appUsed'}, function optionalCallback(err, httpResponse, body) {
-  //       if (err) {
-  //         return console.error('failed:', err);
-  //       }
-  //     });
-  // })
 })
 
 var template = [{
