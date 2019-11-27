@@ -9,7 +9,7 @@ const request = require('request');
 var mb = menubar();
 mb.setOption( 'height', 600 );
 
-var iconPath = path.join(__dirname, '/assets/images/menuicon.png');
+var iconPath = path.join(__dirname, '/assets/images/IconTemplate.png');
 
 // Set default icon
 mb.setOption( 'icon', iconPath );
@@ -27,16 +27,13 @@ mb.on('after-create-window', function createWindow(){
 
 mb.on('after-hide', function(){
   autoUpdater.checkForUpdatesAndNotify();
-  require("machine-uuid")(function(uuid) {
-      var body = {
-        uuid: uuid
-      };
-      request.post({url:'https://waila.ml/api/gifme/updateUsers', formData: body}, function optionalCallback(err, httpResponse, body) {
-        if (err) {
-          return console.error('upload failed:', err);
-        }
-      });
-  })
+  // require("machine-uuid")(function() {      
+  //     request.get({url:'http://localhost:8080/api/gifme/appUsed'}, function optionalCallback(err, httpResponse, body) {
+  //       if (err) {
+  //         return console.error('failed:', err);
+  //       }
+  //     });
+  // })
 })
 
 var template = [{
